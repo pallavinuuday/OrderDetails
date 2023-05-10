@@ -1,0 +1,97 @@
+﻿@{
+    ViewData["Title"] = "VP MAN";
+}
+
+<h2>VP MAN Details</h2>
+
+<div class="container class=" my-5"">
+
+    <table>
+        <tr><td style="height:30px"></td></tr>
+        <tr>
+            <td>  From Date :</td>
+            <td><input type="text" id="txtFromSelectedDate" name="SelectedDate" /></td>
+            <td>To Date :</td>
+            <td> <input type="text" id="txtToSelectedDate" name="SelectedToDate" /></td>
+            <td><input type="button" id="txtSearch" value="Search" name="SelectedToDate" /></td>
+
+        </tr>
+        <tr><td style="height:30px"></td></tr>
+    </table>
+        <script type="text/javascript">
+            $(function () {
+                $('#txtFromSelectedDate').datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    format: "dd/mm/yyyy",
+                    language: "tr"
+                });
+
+                $('#txtToSelectedDate').datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    format: "dd/mm/yyyy",
+                    language: "tr"
+                });
+            });
+
+
+        </script>
+        @if (ViewBag.Message != null)
+        {
+            <script type="text/javascript">
+                $(function () {
+                    alert("@ViewBag.Message");
+                });
+            </script>
+        }
+
+    </div>
+
+    <div class="row my-5">
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
